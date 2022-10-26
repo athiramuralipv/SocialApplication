@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"></head>
+<body>
+<div class="row container ms-5 me-5" style="background-color:white">
+    <div class="row">
+        <div class="col-lg-8">
+            <img src="" alt=" "
+                 style="width:50%; height:50%" >
+        </div>
+        <div class="col-lg-4" style="background-color:white">
+            <br>
+            <br>
+            <br>
+            <h1>LOGIN</h1>
+            <div class="border border-primary">
+                <br>
+                <p>Login here!</p>
+                <form action="" method="post">
+                    {%csrf_token%}
+                    <div class="mb-3">
+                        <input type="text" placeholder= "username" class="form-control" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" placeholder="password" class="form-control" name="password">
+                    </div>
+                    <input type="submit">
+                    <br>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</html>

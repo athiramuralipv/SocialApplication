@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+
+{%block body_block%}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4">
+
+
+<div class="card" style="width: 18rem;">
+  <img src="{{request.user.users.profile_pic.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{request.user}}</h5>
+    <p class="card-text">{{request.user.users.bio}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><i class="fa-solid fa-square-phone-flip"></i> {{request.user.users.phone}}</li>
+    <li class="list-group-item"><i class="fa-solid fa-cake-candles"></i>  {{request.user.users.date_of_birth}}</li>
+
+      {%for user in request.user.users.fetch_followings%}
+      {{user}}
+      {%endfor%}
+    <li class="list-group-item"><i class="fa-solid fa-users"></i> {{request.user.users.fetch_following_count}}</li>
+
+
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link"></a>
+
+    <a href="{%url 'profile-update' request.user.users.id%}" class="card-link">Update Profile</a>
+  </div>
+</div>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+
+{%endblock%}
